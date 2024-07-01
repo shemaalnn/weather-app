@@ -37,7 +37,7 @@ function getCurrentWeather(locationName) {
     fetch(requestUrl)
        .then(response => {
             if (!response.ok) {
-                alert Error("Location not found!");
+                throw new Error("Location not found!");
             }
             return response.json();
        })

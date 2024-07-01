@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.header {
+    background-color: rgb(28, 28, 60);
+    color: white;
+    text-align: center;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pastLocations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#weather {
+    border: 3px solid;
+    border-radius: 5px;
+    float: right;
+    width: 75%;
+}
+
+#currentLocation {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#forecast {
+    border: 3px solid;
+    border-radius: 5px;
+    float: right;
+    width: 75%;
+}
+
+#forecast-days {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.forecast-day {
+    border: 3px solid;
+    border-radius: 5px;
+}

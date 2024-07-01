@@ -56,18 +56,13 @@ function displayCurrentWeather(data) {
     tempEl.textContent = `${data.main.temp}°C`;
     humidityEl.textContent = `${data.main.humidity}%`;
     windEl.textContent = `${data.wind.speed} m/s`;
-    weatherIconEl.querySelector('img').src=`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    weatherIconEl.querySelector('img').src=`https://openweathermap.org/img/wn/10d@2x.png"`;
     weatherEl.style.display = "block";
-}
-
-//local storage for saved locations 
-function saveLocation(locationName) {
-    const pastLocations = JSON.parse(localStorage.getItem())
 }
 
 //Saving the locations to local storage 
 function saveLocation(locationName) {
-    const pastLocations = JSON.parse(localStorage.getItem('pastLocations')) || [];
+    var pastLocations = JSON.parse(localStorage.getItem('pastLocations')) || [];
     if (!pastLocations.includes(locationName)) {
         pastLocations.push(locationName);
         localStorage.setItem('pastLocations', JSON.stringify(pastLocations));

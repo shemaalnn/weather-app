@@ -1,57 +1,125 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-}
-
-.header {
-    background-color: rgb(28, 28, 60);
-    color: white;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 #app {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
-#pastLocations {
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.recents {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.recentLocations {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.location-item {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.clearBtn {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.clearBtn:hover {
+    background-color: #c82333;
 }
 
 #weather {
-    border: 3px solid;
-    border-radius: 5px;
-    float: right;
-    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
 }
 
-#currentLocation {
-    font-size: 25px;
-    font-weight: bold;
+.weatherIcon img {
+    width: 100px;
+    height: 100px;
+}
+
+#weatherInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.temperature, .humidity, .wind {
+    font-size: 1.2rem;
 }
 
 #forecast {
-    border: 3px solid;
-    border-radius: 5px;
-    float: right;
-    width: 75%;
-}
-
-#forecast-days {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.forecast-day {
-    border: 3px solid;
-    border-radius: 5px;
-}
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
